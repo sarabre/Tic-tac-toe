@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d836df7a1e2ad42a22a059a4863522, type: 3}
+  m_Name: Medium
+  m_EditorClassIdentifier: 
+  LevelTitle: Medium
+  Strategies:
+  - {fileID: 11400000, guid: 626fdf898ea462b41a36ef7019756792, type: 2}
+  - {fileID: 11400000, guid: 9e9b6473718e509409766c7dec37f9a7, type: 2}
