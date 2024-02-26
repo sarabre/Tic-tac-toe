@@ -13,3 +13,9 @@ Welcome to Tic-Tac-Toe, a simple and entertaining implementation of the classic 
 ## Future Enhancements
 
 While Actions are used to minimize inter-class communication, some may be incorrectly declared. Future updates aim to refine these areas and address potential bugs.
+
+## Class Diagram
+
+![Class Diagram](UML/UML.png)
+
+This diagram illustrates the simplified class relationships and structure of our project. Each component plays a specific role in achieving the functionality of the system
