@@ -10,18 +10,18 @@ public class AutoPlayer : MonoBehaviour
 
     [Header("Event")]
     [SerializeField] private VoidEventSO _onGameStart;
+    [SerializeField] private VoidEventSO _onAutoPlayerTurn;
 
     private void OnEnable()
     {
         _onGameStart.OnEventRaised += Play;
-        ServiceLocator.GetService<GameManager>().OnAutoPlayerTurn += Play;
+        _onAutoPlayerTurn.OnEventRaised += Play;
     }
 
     private void OnDisable()
     {
         _onGameStart.OnEventRaised += Play;
-        ServiceLocator.GetService<GameManager>().OnAutoPlayerTurn += Play;
-
+        _onAutoPlayerTurn.OnEventRaised += Play;
     }
 
     private Cell GetMove()

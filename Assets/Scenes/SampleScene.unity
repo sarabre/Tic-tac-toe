@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onAppStart: {fileID: 11400000, guid: 5c5633189f123984f87bc282a022b5da, type: 2}
   _onSpecifiedTurn: {fileID: 11400000, guid: dfe7424b72cc1d94b8f47b52dd30f669, type: 2}
+  _onAutoPlayerTurn: {fileID: 11400000, guid: b01c5eac4ae04134d88c90be4dd7da1e, type: 2}
   LevelModel: {fileID: 11400000, guid: 92228d7dfe16d934f901748e5a5f4728, type: 2}
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
   Board: {fileID: 11400000, guid: 76824f8c203e55143aa2fa1a459789b0, type: 2}
@@ -499,6 +500,7 @@ MonoBehaviour:
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
   LevelModel: {fileID: 11400000, guid: 92228d7dfe16d934f901748e5a5f4728, type: 2}
   _onGameStart: {fileID: 11400000, guid: 19e041c4e43c2c641b2e4f443aee04d3, type: 2}
+  _onAutoPlayerTurn: {fileID: 11400000, guid: b01c5eac4ae04134d88c90be4dd7da1e, type: 2}
 --- !u!1001 &483031435
 PrefabInstance:
   m_ObjectHideFlags: 0

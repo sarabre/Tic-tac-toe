@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
     [SerializeField] private VoidEventSO _onSpecifiedTurn;
+    [SerializeField] private VoidEventSO _onAutoPlayerTurn;
 
     public Action<int> OnLevelSelected;
     public Action<Cell> OnPlayed;
-    public Action OnAutoPlayerTurn;
     public Action OnGameEnd;
 
     [Header("Model")]
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             cell.SetCellMark(mark);
             ServiceLocator.GetService<UIManager>().OnButtonSelect?.Invoke(cell);
             TurnModel.OnPlayed?.Invoke();
-            OnAutoPlayerTurn?.Invoke();
+            _onAutoPlayerTurn.RaiseEvent();
         }
     }
 
