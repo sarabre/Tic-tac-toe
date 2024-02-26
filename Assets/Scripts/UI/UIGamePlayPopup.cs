@@ -5,7 +5,10 @@ public class UIGamePlayPopup : UIPopup
 {
     private UIButton[,] _gameButton;
 
+    [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
+
+    [Header("Model")]
     [SerializeField] private BoardModel Board;
     [SerializeField] private TurnModel TurnModel;
     [SerializeField] private UIButton Button;

@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
     [SerializeField] private VoidEventSO _onSpecifiedTurn;
 
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Action OnAutoPlayerTurn;
     public Action OnGameEnd;
 
+    [Header("Model")]
     [SerializeField] private LevelModel LevelModel;
     [SerializeField] private TurnModel TurnModel;
     [SerializeField] private BoardModel Board;

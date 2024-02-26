@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
 
     private PopupDictionary _popupDictionary = new PopupDictionary();
 
+    [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
     [SerializeField] private VoidEventSO _onSpecifiedTurn;
 

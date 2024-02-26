@@ -12,6 +12,7 @@ public class UIGameoverPopup : UIPopup
     [SerializeField] private UIButton ExitButton;
     [SerializeField] private Text ResultText;
 
+    [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
 
     private string _winText = "Congratulations :) \r\nYou Win";
