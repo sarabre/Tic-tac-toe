@@ -8,6 +8,8 @@ public class UIStartPopup : UIPopup
     public UIButton LevelButton;
 
     [Header("Event")]
+    [SerializeField] private IntCallEvent _onLevelSelected;
+
     private void OnEnable()
     {
         OnActive += Clear;
@@ -41,6 +43,6 @@ public class UIStartPopup : UIPopup
     private void OnLevelSelect(int selectedLevelIndex)
     {
         Close();
-        ServiceLocator.GetService<GameManager>().OnLevelSelected?.Invoke(selectedLevelIndex);
+        _onLevelSelected.RaiseEvent(selectedLevelIndex);
     }
 }

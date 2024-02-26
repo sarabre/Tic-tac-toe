@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidEventSO _onGameEnd;
     [SerializeField] private CellEventSO _onPlayed;
     [SerializeField] private CellEventSO _onButtonSelect;
-
-    public Action<int> OnLevelSelected;
+    [SerializeField] private IntCallEvent _onLevelSelected;
 
     [Header("Model")]
     [SerializeField] private LevelModel LevelModel;
@@ -24,7 +23,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         ServiceLocator.RegisterService(this);
-        OnLevelSelected += LevelSelected;
+        _onLevelSelected.OnEventRaised += LevelSelected;
         _onPlayed.OnEventRaised += Play;
         _onPlayed.OnEventRaised += CheckGameEnd;
         _onAppStart.OnEventRaised += ClearModel;
@@ -32,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDisable()
     {
-        OnLevelSelected -= LevelSelected;
+        _onLevelSelected.OnEventRaised -= LevelSelected;
         _onPlayed.OnEventRaised -= Play;
         _onPlayed.OnEventRaised -= CheckGameEnd;
         _onAppStart.OnEventRaised -= ClearModel;

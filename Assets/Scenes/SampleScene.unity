@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelButton: {fileID: -5247188658523920032, guid: 644ec978823c68c44ad1811e52d6437a, type: 3}
+  _onLevelSelected: {fileID: 11400000, guid: e750ff93f93cbef40a24bbb6fe906095, type: 2}
 --- !u!224 &235129456 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5363558999250620593, guid: 9aa050afd1476f24e8778b388aaf82ad, type: 3}
@@ -452,6 +453,7 @@ MonoBehaviour:
   _onGameEnd: {fileID: 11400000, guid: 97ce3787365fddf4582ef373f4b29004, type: 2}
   _onPlayed: {fileID: 11400000, guid: 1999b9849b4077b468de6d5cd17f7584, type: 2}
   _onButtonSelect: {fileID: 11400000, guid: 2bc7dce64d5b968479c56da3dd8d1314, type: 2}
+  _onLevelSelected: {fileID: 11400000, guid: e750ff93f93cbef40a24bbb6fe906095, type: 2}
   LevelModel: {fileID: 11400000, guid: 92228d7dfe16d934f901748e5a5f4728, type: 2}
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
   Board: {fileID: 11400000, guid: 76824f8c203e55143aa2fa1a459789b0, type: 2}
