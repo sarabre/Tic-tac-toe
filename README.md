@@ -19,3 +19,7 @@ While Actions are used to minimize inter-class communication, some may be incorr
 ![Class Diagram](UML/UML.png)
 
 This diagram illustrates the simplified class relationships and structure of our project. Each component plays a specific role in achieving the functionality of the system
+
+## Try it Out
+
+Experience Tic-Tac-Toe now by playing the WebGL build available https://sarabre.github.io/Tic-tac-toe/index .
