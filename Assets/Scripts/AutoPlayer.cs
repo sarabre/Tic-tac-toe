@@ -8,6 +8,7 @@ public class AutoPlayer : MonoBehaviour
     [SerializeField] private TurnModel TurnModel;
     [SerializeField] private LevelModel LevelModel;
 
+    [Header("Event")]
     private void OnEnable()
     {
         ServiceLocator.GetService<GameManager>().OnGameStart += Play;

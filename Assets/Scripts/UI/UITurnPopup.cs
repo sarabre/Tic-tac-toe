@@ -8,6 +8,7 @@ public class UITurnPopup : UIPopup
     public Button NextButton;
     public Text TurnText;
 
+    [Header("Event")]
     private void OnEnable()
     {
         OnActive += Init;
