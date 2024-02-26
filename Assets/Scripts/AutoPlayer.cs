@@ -11,6 +11,7 @@ public class AutoPlayer : MonoBehaviour
     [Header("Event")]
     [SerializeField] private VoidEventSO _onGameStart;
     [SerializeField] private VoidEventSO _onAutoPlayerTurn;
+    [SerializeField] private CellEventSO _onPlayed;
 
     private void OnEnable()
     {
@@ -47,7 +48,7 @@ public class AutoPlayer : MonoBehaviour
         if (!TurnModel.IsUserTurn() && !BoardModel.IsGameEnd())
         {
             Cell cell = GetMove();
-            ServiceLocator.GetService<GameManager>().OnPlayed?.Invoke(cell);
+            _onPlayed.RaiseEvent(cell);
         }
     }
 

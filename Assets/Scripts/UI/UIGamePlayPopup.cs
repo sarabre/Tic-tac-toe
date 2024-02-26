@@ -8,6 +8,7 @@ public class UIGamePlayPopup : UIPopup
     [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
     [SerializeField] private VoidEventSO _onGameEnd;
+    [SerializeField] private CellEventSO _onPlayed;
 
     [Header("Model")]
     [SerializeField] private BoardModel Board;
@@ -62,7 +63,7 @@ public class UIGamePlayPopup : UIPopup
     {
         if (!TurnModel.IsUserTurn())
             return;
-        ServiceLocator.GetService<GameManager>().OnPlayed?.Invoke(cell);
+        _onPlayed.RaiseEvent(cell);
     }
 
     private void ButtonSubmit(Cell move)
