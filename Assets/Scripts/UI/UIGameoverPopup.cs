@@ -12,6 +12,8 @@ public class UIGameoverPopup : UIPopup
     [SerializeField] private UIButton ExitButton;
     [SerializeField] private Text ResultText;
 
+    [SerializeField] private VoidEventSO _onAppStart;
+
     private string _winText = "Congratulations :) \r\nYou Win";
     private string _failText = "Sorry :( \r\nYou failed";
     private string _tiedText = "Tied";
@@ -41,7 +43,7 @@ public class UIGameoverPopup : UIPopup
     private void StartApp()
     {
         Close();
-        ServiceLocator.GetService<GameManager>().OnAppStart?.Invoke();
+        _onAppStart.RaiseEvent();
     }
 
 }

@@ -11,9 +11,11 @@ public class UIManager : MonoBehaviour
 
     private PopupDictionary _popupDictionary = new PopupDictionary();
 
+    [SerializeField] private VoidEventSO _onAppStart;
+
     private void Awake()
     {
-        ServiceLocator.GetService<GameManager>().OnAppStart += StartApp;
+        _onAppStart.OnEventRaised += StartApp;
         ServiceLocator.GetService<GameManager>().OnSpecifiedTurn += SpecifyTurn;
         ServiceLocator.GetService<GameManager>().OnGameStart += StartGame;
         ServiceLocator.GetService<GameManager>().OnGameEnd += GameEnd;
@@ -21,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        ServiceLocator.GetService<GameManager>().OnAppStart -= StartApp;
+        _onAppStart.OnEventRaised -= StartApp;
         ServiceLocator.GetService<GameManager>().OnSpecifiedTurn -= SpecifyTurn;
         ServiceLocator.GetService<GameManager>().OnGameStart -= StartGame;
         ServiceLocator.GetService<GameManager>().OnGameEnd -= GameEnd;

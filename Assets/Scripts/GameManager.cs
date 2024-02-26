@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    public Action OnAppStart;
+    [SerializeField] private VoidEventSO _onAppStart;
     public Action<int> OnLevelSelected;
     public Action OnSpecifiedTurn;
     public Action OnGameStart;
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         OnLevelSelected += LevelSelected;
         OnPlayed += Play;
         OnPlayed += CheckGameEnd;
-        OnAppStart += ClearModel;
+        _onAppStart.OnEventRaised += ClearModel;
     }
 
     private void OnDisable()
@@ -32,12 +32,12 @@ public class GameManager : MonoBehaviour
         OnLevelSelected -= LevelSelected;
         OnPlayed -= Play;
         OnPlayed -= CheckGameEnd;
-        OnAppStart -= ClearModel;
+        _onAppStart.OnEventRaised -= ClearModel;
     }
 
     private void Start()
     {
-        OnAppStart?.Invoke();
+        _onAppStart.RaiseEvent();
     }
 
     public bool TrySelectCell(Cell move, out CellMark mark)

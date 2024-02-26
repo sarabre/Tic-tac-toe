@@ -446,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a443bd0779e4c488d7ec816d7b9d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onAppStart: {fileID: 11400000, guid: 5c5633189f123984f87bc282a022b5da, type: 2}
   LevelModel: {fileID: 11400000, guid: 92228d7dfe16d934f901748e5a5f4728, type: 2}
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
   Board: {fileID: 11400000, guid: 76824f8c203e55143aa2fa1a459789b0, type: 2}
@@ -478,6 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelModel: {fileID: 11400000, guid: 92228d7dfe16d934f901748e5a5f4728, type: 2}
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
+  _onAppStart: {fileID: 11400000, guid: 5c5633189f123984f87bc282a022b5da, type: 2}
 --- !u!114 &403623913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,6 +994,7 @@ MonoBehaviour:
   StartButton: {fileID: 1098168259}
   ExitButton: {fileID: 1690316133}
   ResultText: {fileID: 1278216927}
+  _onAppStart: {fileID: 11400000, guid: 5c5633189f123984f87bc282a022b5da, type: 2}
 --- !u!1 &784193814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13648d7daabeb0b47ae627df99ca64af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onAppStart: {fileID: 11400000, guid: 5c5633189f123984f87bc282a022b5da, type: 2}
   Board: {fileID: 11400000, guid: 76824f8c203e55143aa2fa1a459789b0, type: 2}
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
   Button: {fileID: 1702382721881153054, guid: 9aa050afd1476f24e8778b388aaf82ad, type: 3}

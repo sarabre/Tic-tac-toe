@@ -5,7 +5,7 @@ public class UIGamePlayPopup : UIPopup
 {
     private UIButton[,] _gameButton;
 
-
+    [SerializeField] private VoidEventSO _onAppStart;
     [SerializeField] private BoardModel Board;
     [SerializeField] private TurnModel TurnModel;
     [SerializeField] private UIButton Button;
@@ -20,7 +20,7 @@ public class UIGamePlayPopup : UIPopup
     {
         ServiceLocator.GetService<UIManager>().OnButtonSelect += ButtonSubmit;
         ServiceLocator.GetService<GameManager>().OnGameEnd += DeactiveButton;
-        ServiceLocator.GetService<GameManager>().OnAppStart += ClosePage;
+        _onAppStart.OnEventRaised += ClosePage;
     }
 
     public override void Register()
