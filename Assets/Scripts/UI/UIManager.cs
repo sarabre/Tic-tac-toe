@@ -7,7 +7,6 @@ public class UIManager : MonoBehaviour
 {
     public LevelModel LevelModel;
     public TurnModel TurnModel;
-    public Action<Cell> OnButtonSelect;
 
     private PopupDictionary _popupDictionary = new PopupDictionary();
 

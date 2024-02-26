@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidEventSO _onAutoPlayerTurn;
     [SerializeField] private VoidEventSO _onGameEnd;
     [SerializeField] private CellEventSO _onPlayed;
+    [SerializeField] private CellEventSO _onButtonSelect;
 
     public Action<int> OnLevelSelected;
 
@@ -60,7 +61,7 @@ public class GameManager : MonoBehaviour
         if (TrySelectCell(cell, out CellMark mark))
         {
             cell.SetCellMark(mark);
-            ServiceLocator.GetService<UIManager>().OnButtonSelect?.Invoke(cell);
+            _onButtonSelect.RaiseEvent(cell);
             TurnModel.OnPlayed?.Invoke();
             _onAutoPlayerTurn.RaiseEvent();
         }
