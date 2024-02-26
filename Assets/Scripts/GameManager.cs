@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidEventSO _onAppStart;
     [SerializeField] private VoidEventSO _onSpecifiedTurn;
     [SerializeField] private VoidEventSO _onAutoPlayerTurn;
+    [SerializeField] private VoidEventSO _onGameEnd;
 
     public Action<int> OnLevelSelected;
     public Action<Cell> OnPlayed;
-    public Action OnGameEnd;
 
     [Header("Model")]
     [SerializeField] private LevelModel LevelModel;
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     private void CheckGameEnd(Cell cell)
     {
         if(Board.IsGameEnd())
-            OnGameEnd?.Invoke();
+            _onGameEnd.RaiseEvent();
     }
    
     private void ClearModel()

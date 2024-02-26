@@ -7,6 +7,7 @@ public class UIGamePlayPopup : UIPopup
 
     [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
+    [SerializeField] private VoidEventSO _onGameEnd;
 
     [Header("Model")]
     [SerializeField] private BoardModel Board;
@@ -22,7 +23,7 @@ public class UIGamePlayPopup : UIPopup
     private void Start()
     {
         ServiceLocator.GetService<UIManager>().OnButtonSelect += ButtonSubmit;
-        ServiceLocator.GetService<GameManager>().OnGameEnd += DeactiveButton;
+        _onGameEnd.OnEventRaised += DeactiveButton;
         _onAppStart.OnEventRaised += ClosePage;
     }
 
