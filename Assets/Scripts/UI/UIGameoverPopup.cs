@@ -9,7 +9,7 @@ public class UIGameoverPopup : UIPopup
     [SerializeField] private TurnModel TurnModel;
 
     [SerializeField] private UIButton StartButton;
-    [SerializeField] private UIButton ExiteButton;
+    [SerializeField] private UIButton ExitButton;
     [SerializeField] private Text ResultText;
 
     private string _winText = "Congratulations :) \r\nYou Win";
@@ -25,7 +25,7 @@ public class UIGameoverPopup : UIPopup
     {
         OnActive += Init;
         StartButton.Button.onClick.AddListener(() => StartApp());
-        ExiteButton.Button.onClick.AddListener(() => Application.Quit());
+        ExitButton.Button.onClick.AddListener(() => Application.Quit());
     }
 
     private void Init()
