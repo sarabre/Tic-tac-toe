@@ -7,6 +7,7 @@ public class UIStartPopup : UIPopup
 {
     public UIButton LevelButton;
 
+    [Header("Event")]
     private void OnEnable()
     {
         OnActive += Clear;
