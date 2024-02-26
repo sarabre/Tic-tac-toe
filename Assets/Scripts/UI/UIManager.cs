@@ -14,12 +14,13 @@ public class UIManager : MonoBehaviour
     [Header("Event")]
     [SerializeField] private VoidEventSO _onAppStart;
     [SerializeField] private VoidEventSO _onSpecifiedTurn;
+    [SerializeField] private VoidEventSO _onGameStart;
 
     private void Awake()
     {
         _onAppStart.OnEventRaised += StartApp;
         _onSpecifiedTurn.OnEventRaised += SpecifyTurn;
-        ServiceLocator.GetService<GameManager>().OnGameStart += StartGame;
+        _onGameStart.OnEventRaised += StartGame;
         ServiceLocator.GetService<GameManager>().OnGameEnd += GameEnd;
     }
 
@@ -27,7 +28,7 @@ public class UIManager : MonoBehaviour
     {
         _onAppStart.OnEventRaised -= StartApp;
         _onSpecifiedTurn.OnEventRaised -= SpecifyTurn;
-        ServiceLocator.GetService<GameManager>().OnGameStart -= StartGame;
+        _onGameStart.OnEventRaised -= StartGame;
         ServiceLocator.GetService<GameManager>().OnGameEnd -= GameEnd;
     }
 

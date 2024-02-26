@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidEventSO _onSpecifiedTurn;
 
     public Action<int> OnLevelSelected;
-    public Action OnGameStart;
     public Action<Cell> OnPlayed;
     public Action OnAutoPlayerTurn;
     public Action OnGameEnd;

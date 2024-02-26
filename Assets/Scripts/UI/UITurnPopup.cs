@@ -9,6 +9,8 @@ public class UITurnPopup : UIPopup
     public Text TurnText;
 
     [Header("Event")]
+    [SerializeField] private VoidEventSO _onGameStart;
+
     private void OnEnable()
     {
         OnActive += Init;
@@ -35,6 +37,6 @@ public class UITurnPopup : UIPopup
     private void StartGamePlay()
     {
         Close();
-        ServiceLocator.GetService<GameManager>().OnGameStart?.Invoke();
+        _onGameStart.RaiseEvent();
     }
 }

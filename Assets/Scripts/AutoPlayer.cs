@@ -9,15 +9,17 @@ public class AutoPlayer : MonoBehaviour
     [SerializeField] private LevelModel LevelModel;
 
     [Header("Event")]
+    [SerializeField] private VoidEventSO _onGameStart;
+
     private void OnEnable()
     {
-        ServiceLocator.GetService<GameManager>().OnGameStart += Play;
+        _onGameStart.OnEventRaised += Play;
         ServiceLocator.GetService<GameManager>().OnAutoPlayerTurn += Play;
     }
 
     private void OnDisable()
     {
-        ServiceLocator.GetService<GameManager>().OnGameStart += Play;
+        _onGameStart.OnEventRaised += Play;
         ServiceLocator.GetService<GameManager>().OnAutoPlayerTurn += Play;
 
     }
