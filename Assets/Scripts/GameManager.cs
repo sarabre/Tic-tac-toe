@@ -7,8 +7,9 @@ using Unity.VisualScripting;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private VoidEventSO _onAppStart;
+    [SerializeField] private VoidEventSO _onSpecifiedTurn;
+
     public Action<int> OnLevelSelected;
-    public Action OnSpecifiedTurn;
     public Action OnGameStart;
     public Action<Cell> OnPlayed;
     public Action OnAutoPlayerTurn;
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         TurnModel.OnSpeciyTurn?.Invoke();
         LevelModel.LevelSelected(levelIndex);
-        OnSpecifiedTurn?.Invoke();
+        _onSpecifiedTurn.RaiseEvent();
     }
 
     private void CheckGameEnd(Cell cell)

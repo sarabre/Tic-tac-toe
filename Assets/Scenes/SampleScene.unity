@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onAppStart: {fileID: 11400000, guid: 5c5633189f123984f87bc282a022b5da, type: 2}
+  _onSpecifiedTurn: {fileID: 11400000, guid: dfe7424b72cc1d94b8f47b52dd30f669, type: 2}
   LevelModel: {fileID: 11400000, guid: 92228d7dfe16d934f901748e5a5f4728, type: 2}
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
   Board: {fileID: 11400000, guid: 76824f8c203e55143aa2fa1a459789b0, type: 2}
@@ -480,6 +481,7 @@ MonoBehaviour:
   LevelModel: {fileID: 11400000, guid: 92228d7dfe16d934f901748e5a5f4728, type: 2}
   TurnModel: {fileID: 11400000, guid: e84c951caa370034c9ecac4699d2fe53, type: 2}
   _onAppStart: {fileID: 11400000, guid: 5c5633189f123984f87bc282a022b5da, type: 2}
+  _onSpecifiedTurn: {fileID: 11400000, guid: dfe7424b72cc1d94b8f47b52dd30f669, type: 2}
 --- !u!114 &403623913
 MonoBehaviour:
   m_ObjectHideFlags: 0
